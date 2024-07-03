@@ -1,7 +1,6 @@
 'use client';
 
 import { CarProps } from '@/types';
-import { calculateCarRent } from '@/utils';
 import { generateCarImageUrl } from '@/utils/apis';
 import Image from 'next/image';
 import { useCallback, useState } from 'react';
@@ -13,7 +12,6 @@ interface CarCardProps {
 }
 const CarCard = ({ car }: CarCardProps) => {
   const { city_mpg, year, make, model, transmission, drive } = car;
-  const carRent = calculateCarRent(city_mpg, year);
 
   const [open, setOpen] = useState<boolean>(false);
   const handleModal = useCallback(() => {
@@ -27,11 +25,6 @@ const CarCard = ({ car }: CarCardProps) => {
           [{make}] {model}
         </h2>
       </div>
-      <p className='flex mt-6 text-[2rem] leading-[2.375rem] font-extrabold'>
-        <span className='self-start text-[.875rem] leading-[1.0625rem] font-semibold'>$</span>
-        {carRent}
-        <span className='self-end text-[.875rem] leading-[1.0625rem] font-medium'>/day</span>
-      </p>
       <div className='relative w-full h-40 my-3'>
         <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain' />
       </div>
@@ -62,12 +55,7 @@ const CarCard = ({ car }: CarCardProps) => {
 
 export default CarCard;
 
-interface CarIcon {
-  icon: string;
-  alt: string;
-  text: string;
-}
-const CarCardIcon = ({ icon, alt, text }: CarIcon) => {
+const CarCardIcon = ({ icon, alt, text }: { icon: string; alt: string; text: string }) => {
   return (
     <div className='car-card__icon'>
       <Image src={icon} width={20} height={20} alt={alt} priority className='object-contain' />

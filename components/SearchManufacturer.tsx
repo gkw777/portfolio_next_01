@@ -25,11 +25,12 @@ const SearchManufacturer = ({ value, onChange }: SearchManuFacturerProps) => {
           </ComboboxButton>
           <ComboboxInput
             className='search-manufacturer__input'
-            placeholder='Volkswagen'
-            // displayValue={(value: string) => value}
-            // onChange={(e) => {
-            //   setQuery(e.target.value);
-            // }}
+            placeholder='자동차 브랜드'
+            displayValue={(value: string) => value}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              onChange(e.target.value);
+            }}
           />
         </div>
         <ComboboxOptions

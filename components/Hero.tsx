@@ -5,14 +5,17 @@ import { useCallback } from 'react';
 import CustomButton from './CustomButton';
 
 const Hero = () => {
-  const handleScroll = useCallback(() => {}, []);
+  const handleScroll = useCallback(() => {
+    const el_discover = document.getElementById('discover');
+    el_discover?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
   return (
     <div className='kg-hero'>
       <div className='flex-1 pt-36 padding-x'>
-        <h1 className='hero__title'>Find, book, rent a car-quick and super easy!</h1>
-        <p className='hero_subtitle'>Streamline your car rental experience with our effortless booking process.</p>
+        <h1 className='hero__title'>많은 자동차을 검색해 보세요!</h1>
+        <p className='hero_subtitle'>당신이 원하는 차종이 무엇이든 찾아 드립니다.</p>
         <CustomButton
-          title='Explore Cars'
+          title='자동차 검색'
           containerStyles='bg-blue-700 text-white rounded-full mt-10'
           onClick={handleScroll}
         />

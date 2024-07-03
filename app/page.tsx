@@ -40,19 +40,17 @@ const Home = () => {
 
   return (
     <main className='overflow-hidden'>
-      {/* <h1>next JS portfolio 02</h1> */}
       <Hero />
-
       <div id='discover' className='mt-12 padding-x padding-y max-width'>
         <div className='home__text-container'>
-          <h1 className='text-4xl font-extrabold text-black'>Car Catalogue</h1>
-          <p>Explore out cars you might like</p>
+          <h1 className='text-4xl font-extrabold text-black'>자동차 카탈로그</h1>
+          <p>당신이 좋아할 만한 자동차를 탐색해보세요</p>
         </div>
         <div className='home__filters'>
           <SearchBar setManufacturer={setManufacturer} setModel={setModel} />
           <div className='home__filter-container'>
-            <CustomFilter title='fuel' options={fuels} setFilter={setFuel} />
-            <CustomFilter title='year' options={yearsOfProduction} setFilter={setYear} />
+            <CustomFilter title='연료' options={fuels} setFilter={setFuel} />
+            <CustomFilter title='년도' options={yearsOfProduction} setFilter={setYear} />
           </div>
         </div>
         {!isDataEmpty ? (
@@ -66,7 +64,8 @@ const Home = () => {
           </section>
         ) : (
           <div className='px-5 pt-5 text-center'>
-            <h2 className='font-semibold text-2xl'>Oops, no results</h2>
+            <h2 className='font-semibold text-2xl'></h2>
+            <h2 className='font-semibold text-2xl'>ㅜ결과가 없습니다ㅜ</h2>
           </div>
         )}
       </div>

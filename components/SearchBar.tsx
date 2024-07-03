@@ -12,27 +12,6 @@ interface SearchBarProps {
 const SearchBar = ({ setManufacturer, setModel }: SearchBarProps) => {
   const [searchManufacturer, setSearchManufacturer] = useState<string>('');
   const [searchModel, setSearchModel] = useState<string>('');
-  // const router = useRouter();
-
-  // const updateSearchParams = useCallback(
-  //   (model: string, manufacturer: string) => {
-  //     const searchParams = new URLSearchParams(window.location.search);
-  //     if (model) {
-  //       searchParams.set('model', model);
-  //     } else {
-  //       searchParams.delete('model');
-  //     }
-  //     if (manufacturer) {
-  //       searchParams.set('manufacturer', manufacturer);
-  //     } else {
-  //       searchParams.delete('manufacturer');
-  //     }
-
-  //     const newPathName = `${window.location.pathname}?${searchParams.toString()}`;
-  //     router.push(newPathName);
-  //   },
-  //   [router]
-  // );
 
   const onSearch = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {
@@ -59,7 +38,7 @@ const SearchBar = ({ setManufacturer, setModel }: SearchBarProps) => {
           type='text'
           name='model'
           className='searchbar__input'
-          placeholder='Tiguan'
+          placeholder='자동차 모델'
           value={searchModel}
           onChange={(e) => setSearchModel(e.target.value)}
         />

@@ -12,6 +12,7 @@ CarHub 클론 프로젝트입니다.
 7. 자동차 이미지: imagin.studio 에서 이미지 API 호출( 개인에겐 API가 막혀있으며 모든 이미지가 나오질 않음 )
    
 ### 폴더 구조
+![화면 캡처 2024-07-03 180219](https://github.com/gkw777/portfolio_next_01/assets/62530852/a25ef42c-1834-4c29-8ab6-6ff2b973061c)
 1. app
   - 글로벌 css, 레이아웃, 페이지
 2. components
@@ -24,7 +25,6 @@ CarHub 클론 프로젝트입니다.
    - api 함수 정의
 6. public
    - 이미지 파일
-![화면 캡처 2024-07-03 180219](https://github.com/gkw777/portfolio_next_01/assets/62530852/a25ef42c-1834-4c29-8ab6-6ff2b973061c)
 
 ## 데모 영상
 ![_2024_07_03_18_18_37_649-ezgif com-video-to-gif-converter (1)](https://github.com/gkw777/portfolio_next_01/assets/62530852/8b93d733-8a76-4b30-993d-bbd155b8271e)

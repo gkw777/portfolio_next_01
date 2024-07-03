@@ -23,6 +23,6 @@ ver 1.0.0
 ### 데스크탑 화면
 ![screencapture-gkw777-portfolio-next-01-vercel-app-2024-07-03-17_00_38](https://github.com/gkw777/portfolio_next_01/assets/62530852/2eaba58c-2156-46d3-94fc-4679362d1b72)
 ### 테블릿 화면
-![screencapture-gkw777-portfolio-next-01-vercel-app-2024-07-03-17_39_25](https://github.com/gkw777/portfolio_next_01/assets/62530852/3bad56c7-347d-4e1d-b315-0c3b167d88c2)
+![screencapture-gkw777-portfolio-next-01-vercel-app-2024-07-03-17_00_38](https://github.com/gkw777/portfolio_next_01/assets/62530852/792e1e78-fdb0-4f81-8038-5374c21666d5)
 ### 모바일 화면
 ![screencapture-gkw777-portfolio-next-01-vercel-app-2024-07-03-17_39_25](https://github.com/gkw777/portfolio_next_01/assets/62530852/2d69a6f9-d4ad-4154-a011-da44c642834f)

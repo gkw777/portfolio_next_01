@@ -40,15 +40,15 @@
 }
 
 .hero__image-container {
-  @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen;
+  @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen md:h-[75vh] sm:h-[35vh] h-[35vh];
 }
 
 .hero__image {
-  @apply xl:w-full xl:h-full relative z-0 h-[590px] w-11/12;
+  @apply xl:w-full xl:h-full relative z-0 h-full  w-11/12;
 }
 
 .hero__image-overlay {
-  @apply xl:top-[-96px] xl:right-[-50%] xl:h-screen absolute right-[-25%] h-[590px] -z-10 w-full overflow-hidden bg-[url('/hero-bg.png')] bg-repeat-round;
+  @apply xl:top-[-96px] xl:right-[-50%] xl:h-screen absolute right-[-25%] md:h-[75vh] sm:h-[35vh] h-[35vh] -z-10 w-full overflow-hidden;
 }
 /* END: Hero Styles*/
 

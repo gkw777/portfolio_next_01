@@ -1,5 +1,6 @@
 'use client';
 
+import useScrollFadeIn from '@/hooks/useScrollFadeIn';
 import Image from 'next/image';
 import { useCallback } from 'react';
 import CustomButton from './CustomButton';
@@ -9,6 +10,9 @@ const Hero = () => {
     const el_discover = document.getElementById('discover');
     el_discover?.scrollIntoView({ behavior: 'smooth' });
   }, []);
+
+  const animatedItem = useScrollFadeIn('left', 0.8);
+
   return (
     <div className='kg-hero'>
       <div className='flex-1 pt-36 padding-x'>
@@ -21,7 +25,7 @@ const Hero = () => {
         />
       </div>
       <div className='hero__image-container'>
-        <div className='hero__image'>
+        <div className='hero__image' {...animatedItem}>
           <Image src='/hero.png' alt='hero' fill priority className='object-contain' />
         </div>
         <div className='hero__image-overlay'>

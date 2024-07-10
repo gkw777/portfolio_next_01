@@ -58,7 +58,7 @@ export default CarCard;
 const CarCardIcon = ({ icon, alt, text }: { icon: string; alt: string; text: string }) => {
   return (
     <div className='car-card__icon'>
-      <Image src={icon} width={20} height={20} alt={alt} priority className='object-contain' />
+      <Image src={icon} width={20} height={20} alt={alt} className='object-contain' />
       <p className='text-sm'>{text}</p>
     </div>
   );

@@ -42,7 +42,7 @@ const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0, scroll_thres
         const timer = setTimeout(() => {
           observer.current?.unobserve(current);
           clearTimeout(timer);
-        }, duration * 1000);
+        }, (duration + delay) * 1000);
       }
     },
     [delay, duration]

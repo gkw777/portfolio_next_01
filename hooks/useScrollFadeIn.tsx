@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 interface FadeInProps {
   direction: string;
@@ -8,9 +8,10 @@ interface FadeInProps {
   delay: number;
   scroll_threshold: number;
 }
+
 const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0, scroll_threshold = 0.5): FadeInProps => {
   const element = useRef<HTMLElement>(null);
-  const [completed, setCompleted] = useState<boolean>(false); // 애니메이션 완료
+  const observer = useRef<IntersectionObserver>();
 
   const handleDirection = useCallback((name: string) => {
     switch (name) {
@@ -29,7 +30,6 @@ const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0, scroll_thres
 
   const onScroll = useCallback(
     ([entry]: IntersectionObserverEntry[]) => {
-      if (completed) return;
       const { current } = element as any;
       if (entry.isIntersecting) {
         current.style.transitionProperty = 'all';
@@ -38,27 +38,26 @@ const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0, scroll_thres
         current.style.transitionDelay = `${delay}s`;
         current.style.opacity = 1;
         current.style.transform = 'translate3d(0, 0, 0)';
-        setCompleted(true);
+        // 애니메이션 끝나면 감시 중지
         const timer = setTimeout(() => {
-          current.style.transitionProperty = 'none';
+          observer.current?.unobserve(current);
           clearTimeout(timer);
         }, duration * 1000);
       }
     },
-    [delay, duration, completed]
+    [delay, duration]
   );
 
   useEffect(() => {
-    let observer: IntersectionObserver;
     const { current } = element;
     if (current) {
-      observer = new IntersectionObserver(onScroll, {
+      observer.current = new IntersectionObserver(onScroll, {
         threshold: scroll_threshold
       });
-      observer.observe(current);
+      observer.current.observe(current);
     }
 
-    return () => observer && observer.disconnect();
+    return () => observer && observer.current?.disconnect();
   }, [onScroll, scroll_threshold]);
 
   return { ref: element, style: { opacity: 0, transform: handleDirection(direction) } } as any;

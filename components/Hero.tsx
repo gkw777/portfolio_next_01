@@ -11,7 +11,7 @@ const Hero = () => {
     el_discover?.scrollIntoView({ behavior: 'smooth' });
   }, []);
 
-  const animatedItem = useScrollFadeIn('left', 0.8);
+  const animatedItem = useScrollFadeIn('left', 0.8, 0, 0.2);
 
   return (
     <div className='kg-hero'>

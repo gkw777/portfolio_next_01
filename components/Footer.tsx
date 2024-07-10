@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className='flex flex-col text-black-100 border-t border-gray-100 mt-5'>
       <div className='flex max-md:flex-col flex-wrap justify-between gap-5 padding-x py-10'>
         <div className='flex flex-col justify-start items-start gap-6'>
-          <Image src='/logo.png' alt='logo' width={250} height={115} className='object-contain' />
+          <Image src='/logo.png' alt='logo' width={250} height={115} priority className='object-contain' />
           <p className='text-base text-gray-700'>
             github.com/gkw777 2024 <br />
             All Rights Reserved &copy;

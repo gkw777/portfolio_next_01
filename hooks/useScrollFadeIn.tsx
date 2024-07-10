@@ -40,6 +40,7 @@ const useScrollFadeIn = (direction = 'up', duration = 1, delay = 0, scroll_thres
         current.style.transform = 'translate3d(0, 0, 0)';
         // 애니메이션 끝나면 감시 중지
         const timer = setTimeout(() => {
+          current.style.transitionProperty = 'none';
           observer.current?.unobserve(current);
           clearTimeout(timer);
         }, (duration + delay) * 1000);

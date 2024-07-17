@@ -22,10 +22,10 @@ CarHub 클론 프로젝트입니다.
 
 ### 이슈사항
 #### Lighthouse 성능 지표 79점 LCP 3.6초 낮다(?).
-![화면 캡처 2024-07-17 180639_111](https://github.com/user-attachments/assets/db34bd49-293d-40d1-b915-f955f5623f89)
-![화면 캡처 2024-07-17 180639_222](https://github.com/user-attachments/assets/77cd77e5-10c2-4e0b-86bb-fe63bb4404cb)
+![화면 캡처 2024-07-17 180639_111](https://github.com/user-attachments/assets/d170332f-bed0-46e3-8024-f8f15bf94bf7)
+![화면 캡처 2024-07-17 180639_222](https://github.com/user-attachments/assets/2bc18aa5-7988-4833-af1c-1ea238466acb)
 1. 원인: hero 이미지와 BG 이미지의 해상도에 따라 높이 조절하지 않아 불필요한 높이를 가지고 있다라는 점.
-   해결점:
+   - 해결점:
      - 먼저 BG 이미지를 css에서 url로 로드하는 방식을 next/Image 컴포넌트로 이미지 로드 처리
      - hero 이미지와 BG 이미지를 해상도에 따라 높이 조절 처리( 미디어 쿼리 min-width: 1280px: 100vh, 786px: 75vh, 그 외 해상도일때 35vh)
 

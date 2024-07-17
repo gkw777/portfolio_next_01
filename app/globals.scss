@@ -40,7 +40,7 @@
 }
 
 .hero__image-container {
-  @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen md:h-[75vh] sm:h-[35vh] h-[35vh];
+  @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen md:h-[75vh] h-[35vh];
 }
 
 .hero__image {
@@ -48,7 +48,7 @@
 }
 
 .hero__image-overlay {
-  @apply xl:top-[-96px] xl:right-[-50%] xl:h-screen absolute right-[-25%] md:h-[75vh] sm:h-[35vh] h-[35vh] -z-10 w-full overflow-hidden;
+  @apply xl:top-[-96px] xl:right-[-50%] xl:h-screen absolute right-[-25%] md:h-[75vh] h-[35vh] -z-10 w-full overflow-hidden;
 }
 /* END: Hero Styles*/
 

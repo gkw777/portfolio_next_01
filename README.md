@@ -33,6 +33,7 @@ CarHub 클론 프로젝트입니다.
 ## 데모 영상
 ![_2024_07_03_18_18_37_649-ezgif com-video-to-gif-converter (1)](https://github.com/gkw777/portfolio_next_01/assets/62530852/8b93d733-8a76-4b30-993d-bbd155b8271e)
 
+<!--
 ## Screen View
 ### 데스크탑 화면
 ![screencapture-gkw777-portfolio-next-01-vercel-app-2024-07-03-17_00_38](https://github.com/gkw777/portfolio_next_01/assets/62530852/2eaba58c-2156-46d3-94fc-4679362d1b72)
@@ -40,3 +41,4 @@ CarHub 클론 프로젝트입니다.
 ![screencapture-gkw777-portfolio-next-01-vercel-app-2024-07-03-17_40_48](https://github.com/gkw777/portfolio_next_01/assets/62530852/c095a4d9-c2fc-4937-9645-f8b74d0e77e9)
 ### 모바일 화면
 ![screencapture-gkw777-portfolio-next-01-vercel-app-2024-07-03-17_39_25](https://github.com/gkw777/portfolio_next_01/assets/62530852/2d69a6f9-d4ad-4154-a011-da44c642834f)
+-->

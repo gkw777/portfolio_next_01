@@ -26,7 +26,7 @@ CarHub 클론 프로젝트입니다.
 
 ## 이슈사항
 
-### Lighthouse 성능 지표 79점 LCP 3.6초 낮다(?). 해결 후 성능 지표 99점 LCP 0.6 초 단축
+### Lighthouse 성능 지표 79점 LCP 3.6초 낮다(?). 해결 후 성능 지표 98점 LCP 0.6 초 단축
 
 ![화면 캡처 2024-07-17 180639_111](https://github.com/user-attachments/assets/d170332f-bed0-46e3-8024-f8f15bf94bf7)
 ![화면 캡처 2024-07-17 180639_222](https://github.com/user-attachments/assets/2bc18aa5-7988-4833-af1c-1ea238466acb)
